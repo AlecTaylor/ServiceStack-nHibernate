@@ -9,9 +9,15 @@ using ServiceStack.ServiceInterface;
 using ServiceStack.ServiceInterface.Auth;
 using ServiceStack.ServiceInterface.ServiceModel;
 using ServiceStack.WebHost.Endpoints;
+using NHibernate; // <--!
 
-namespace ServiceStack_nHibernate_example
-{
+namespace ServiceStack_nHibernate_example {
+    /*IQuery q = _unitOfWork.CurrentSession
+                          .CreateQuery("from Product order by newid()")
+                          .SetMaxResults(5);
+
+    var randomWords = q.List<Product>();*/
+
 	//Request DTO
 	public class Hello
 	{
